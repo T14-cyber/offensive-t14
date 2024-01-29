@@ -8,6 +8,7 @@ files = []
 for file in os.listdir():
     if file =="lock.py":
         continue
-    files.append(file)
+    if os.path.isfile(file):
+        files.append(file)
     
 print(files)
