@@ -6,7 +6,7 @@ from cryptography.fernet import Fernet
 
 files = []
 for file in os.listdir():
-    if file =="lock.py":
+    if file =="lock.py" or file =="secret.key":
         continue
     if os.path.isfile(file):
         files.append(file)
